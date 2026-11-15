@@ -4,7 +4,7 @@
 
 **See inside any GGUF: where two quantizations part ways, token by token, and what each sampler cuts. Live, in your browser.**
 
-https://github.com/user-attachments/assets/bb553939-2fe5-4dc7-8f60-e7395ce315d8
+https://github.com/user-attachments/assets/5f9492ba-0ba4-4f40-94b3-93503a099475
 
 *`inside-llm` with Qwen3.5-4B at two quantizations, Q2_K and Q8_0: the token where their texts split, the candidates behind each pick, the sampler chain, branches and the relief of probabilities. Every number comes from the real engine running the two models.*
 
