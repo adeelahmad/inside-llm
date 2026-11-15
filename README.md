@@ -4,11 +4,15 @@
 
 **See inside any GGUF: where two quantizations part ways, token by token, and what each sampler cuts. Live, in your browser.**
 
-![inside-llm comparing Qwen3.5-4B Q2_K (A) and Q8_0 (B): at position 31 A picks "six" and B "eight", and their texts split there](assets/inside-llm.png)
+https://github.com/user-attachments/assets/bb553939-2fe5-4dc7-8f60-e7395ce315d8
+
+*`inside-llm` with Qwen3.5-4B at two quantizations, Q2_K and Q8_0: the token where their texts split, the candidates behind each pick, the sampler chain, branches and the relief of probabilities. Every number comes from the real engine running the two models.*
 
 `inside-llm` loads one or two GGUF models with [llama.cpp](https://github.com/ggml-org/llama.cpp) and shows in the browser what the model does while it generates: the probability of each token, the alternatives it discarded, what each sampler removes and, with two models (two quantizations, or a base model and its fine-tune), the divergence at every position and the exact token where their texts split. It is a single native binary that serves its own web page. Everything runs on your machine: no accounts, no API keys, no telemetry. A session can be recorded and replayed later in a static page, with no engine and no GPU.
 
 ## What you see
+
+![inside-llm comparing Qwen3.5-4B Q2_K (A) and Q8_0 (B): at position 31 A picks "six" and B "eight", and their texts split there](assets/inside-llm.png)
 
 - **Stream:** the generated text, one column per model (A | B). Brightness is the probability the model gave to each token; a magenta mark shows where A and B would pick differently. Two modes: *Same text* (lockstep: both models read the text written by the driver) and *Each its own* (free: each model follows its own picks until the texts split).
 - **Candidates:** the decision behind the selected token. Mirrored bars for A and B on each candidate, entropy, effective number of options, Jensen-Shannon divergence and KL in both directions. **Compare** puts the two distributions side by side.
