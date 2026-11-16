@@ -10,7 +10,7 @@ https://github.com/user-attachments/assets/5f9492ba-0ba4-4f40-94b3-93503a099475
 
 `inside-llm` loads one or two GGUF models with [llama.cpp](https://github.com/ggml-org/llama.cpp) and shows in the browser what the model does while it generates: the probability of each token, the alternatives it discarded, what each sampler removes and, with two models (two quantizations, or a base model and its fine-tune), the divergence at every position and the exact token where their texts split. It is a single native binary that serves its own web page. Everything runs on your machine: no accounts, no API keys, no telemetry. A session can be recorded and replayed later in a static page, with no engine and no GPU.
 
-**[Try the live demo](https://manuelgs.com/inside-llm/demo/)**: recorded sessions replayed in your browser, nothing to install.
+**[Try the live demo](https://manuelgs.com/en/inside-llm/demo/)**: recorded sessions replayed in your browser, nothing to install.
 
 ## What you see
 
@@ -67,7 +67,7 @@ sha256sum -c --ignore-missing SHA256SUMS
 
 ## Try it without installing
 
-**Live demo: [manuelgs.com/inside-llm/demo/](https://manuelgs.com/inside-llm/demo/)**. Recorded sessions play back in a static build of the same web page: no engine, no models, no GPU. Pick a session in the gallery and press **Replay**: selection, sweeping, the recorded branches, gates and the relief all work; anything that would send a command to the engine is disabled.
+**Live demo: [manuelgs.com/inside-llm/demo/](https://manuelgs.com/en/inside-llm/demo/)**. Recorded sessions play back in a static build of the same web page: no engine, no models, no GPU. Pick a session in the gallery and press **Replay**: selection, sweeping, the recorded branches, gates and the relief all work; anything that would send a command to the engine is disabled.
 
 To serve the same page yourself, from a clone of this repository (see [Build from source](#build-from-source)), with Docker:
 
